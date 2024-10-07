@@ -11,11 +11,13 @@ import pandas as pd
 
 
 ```python
-# Initialize the StockScreener with your session credentials
+# Initialize StockScreener with session credentials
 screener = tvs.StockScreener(sessionid="YOUR SESSION ID", sessionid_sign="YOUR SESSION ID SIGN")
 
 if screener.is_authenticated():
     print("Successfully authenticated with TradingView")
+
+# Even if no credentials this should still work
 else:
     print("Failed to authenticate with TradingView")
 
