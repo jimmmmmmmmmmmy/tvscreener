@@ -1,0 +1,15 @@
+.
+├── __init__.py
+├── beauty
+│   └── __init__.py
+├── directory_structure.txt
+├── field
+│   ├── __init__.py
+│   ├── crypto.py
+│   ├── forex.py
+│   └── stock.py
+├── filter
+│   └── __init__.py
+└── util.py
+
+4 directories, 9 files

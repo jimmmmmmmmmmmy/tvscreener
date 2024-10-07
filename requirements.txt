@@ -1,0 +1,8 @@
+pandas
+requests~=2.31
+jinja2
+selenium
+tqdm
+setuptools
+pytest
+pytest-cov
