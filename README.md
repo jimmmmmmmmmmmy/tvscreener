@@ -22,14 +22,11 @@ else:
 # Set the country filter to China
 screener.set_countries(Country.CHINA)
 
-# Get all the data
 df = screener.get()
 
-# Check if the DataFrame is empty
 if df.empty:
     print("No data found")
 else:
-    # Define desired columns and their new names
     desired_columns = {
         'Symbol': 'Symbol',
         'Name': 'Name',
@@ -38,10 +35,12 @@ else:
         'Country' : 'Country'
     }
 
-    # Format the data (only for columns that exist)
+    # Format the data for columns that exist
     for col in df_selected.columns:
-        if col == 'Price' or col == 'Change %' or col == 'P/E Ratio' or col == 'Dividend Yield %':
+        if col == 'Price' or col == 'Change %':
             df_selected[col] = df_selected[col].round(2)
+
+        # we're not pulling volume or market cap but eh its here
         elif col == 'Volume':
             df_selected[col] = df_selected[col].apply(lambda x: f'{x:,.0f}' if pd.notnull(x) else '')
         elif col == 'Market Cap':
@@ -51,14 +50,14 @@ else:
     sort_column = 'Change from Open %' if 'Change from Open %' in df_selected.columns else df_selected.columns[0]
     df_sorted = df_selected.sort_values(sort_column, ascending=False)
 
-    # Display the results
+    # Display results
     print("\nTop Chinese Stocks:")
     pd.set_option('display.max_rows', None)
     pd.set_option('display.max_columns', None)
     pd.set_option('display.width', None)
     print(df_sorted)
 
-    # Print the number of results
+    # Check if valid
     print(f"\nTotal number of Chinese stocks: {len(df_sorted)}")
 ```
 
