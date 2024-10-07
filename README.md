@@ -89,7 +89,8 @@ print(df.columns.tolist())
     Here's the list with each element on a new line after the comma:
 
 ```
-['Symbol',
+[
+'Symbol',
 'Name',
 'Description',
 'All Time High',
