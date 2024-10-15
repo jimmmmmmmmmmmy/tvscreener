@@ -24,5 +24,5 @@ setup(
     packages=find_packages(),
     install_requires=['pandas', 'requests>=2.27.1'],
     keywords='',
-    python_requires='>=3.10',
+    python_requires='>=3.9',
 )
