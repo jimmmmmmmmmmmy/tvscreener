@@ -14,7 +14,7 @@ LONG_DESCRIPTION = 'Python library to retrieve screen for stock data from TV Scr
 # Setting up
 setup(
     name="tvscreener",
-    url="https://github.com/jimmmmmmmmmmmy/sloppy_tv_screener",
+    url="https://github.com/jimmmmmmmmmmmy/tvscreener",
     version=VERSION,
     description=DESCRIPTION,
     long_description=long_description,
